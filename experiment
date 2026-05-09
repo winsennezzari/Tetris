@@ -1,0 +1,13 @@
+import pygame
+from constants import *
+
+
+def draw_grid(screen):
+    for x in range(GRID_WIDTH + 1):
+        pygame.draw.line(screen, GRAY, (x * BLOCK_SIZE, 0), (x * BLOCK_SIZE, SCREEN_HEIGHT))
+
+pygame.init()
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption("Tetris - Rotation avec Shift")
+
+draw_grid(screen)
